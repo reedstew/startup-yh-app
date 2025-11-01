@@ -25,7 +25,7 @@ export default function AboutPage() {
                 <section className="bg-white rounded-lg shadow-md p-8 mb-8">
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
                     <p className="text-gray-600 text-lg leading-relaxed">
-                        We're building a platform that brings people together to share ideas,
+                        We&apos;re building a platform that brings people together to share ideas,
                         collaborate on projects, and create meaningful connections. Our mission
                         is to provide a space where everyone feels welcome and empowered to
                         contribute to the community.
@@ -92,7 +92,7 @@ export default function AboutPage() {
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-2">Quality</h3>
                             <p className="text-gray-600">
-                                We're committed to delivering high-quality experiences and reliable service.
+                                We are committed to delivering high-quality experiences and reliable service.
                             </p>
                         </div>
                     </div>

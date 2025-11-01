@@ -1,7 +1,6 @@
 'use client'
 
-export default function Error({ error, reset }: {
-    error: Error
+export default function Error({ reset }: {
     reset: () => void
 }) {
     return (
