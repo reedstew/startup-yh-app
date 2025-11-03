@@ -1,12 +1,13 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import KeyboardNavigation from '@/components/KeyboardNavigation'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-    title: 'My App',
-    description: 'Built with Next.js and Supabase',
+    title: '@YoungHumanitarians',
+    description: 'Proxy website for young humanitarians startup',
 }
 
 export default function RootLayout({
@@ -16,7 +17,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+        <KeyboardNavigation />
+        {children}
+        </body>
         </html>
     )
 }
