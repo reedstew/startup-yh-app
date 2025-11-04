@@ -106,6 +106,27 @@ export default function NewsPage() {
                     ))}
                 </div>
 
+                {/* Featured Game Section */}
+                <section className="mt-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg shadow-md p-8 text-white">
+                    <h2 className="text-2xl font-bold mb-4">🎮 Featured Game: 7 Habits Mountain Climb</h2>
+                    <p className="mb-4 text-lg">
+                        Embark on an educational adventure! Climb the mountain and learn the 7 Habits of Highly Effective People.
+                    </p>
+                    <div className="flex items-center gap-4 mb-4">
+                        <span className="text-4xl">🏔️</span>
+                        <div>
+                            <p className="font-semibold">Learn leadership skills while you play!</p>
+                            <p className="text-sm opacity-90">Defeat monsters, reach checkpoints, and discover each habit</p>
+                        </div>
+                    </div>
+                    <Link
+                        href="/game"
+                        className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+                    >
+                        Play Now! 🎮
+                    </Link>
+                </section>
+
                 {/* Forums Section */}
                 <section className="mt-12 bg-white rounded-lg shadow-md p-8">
                     <h2 className="text-2xl font-bold text-gray-900 mb-6">Community Forums</h2>
