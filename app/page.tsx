@@ -1,135 +1,51 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
-export default function LandingPage() {
+export default function Home() {
     return (
-        <>
-            {/* Mobile Layout: Logo on top, grid below */}
-            <div className="md:hidden min-h-screen bg-white flex flex-col">
-                {/* Logo Section - Top */}
-                <div className="flex items-center justify-center py-12 bg-white">
-                    <div className="bg-white p-3 shadow-xl rounded-2xl inline-block">
-                        <Image
-                            src="/logo.png"
-                            alt="Logo"
-                            width={1000}
-                            height={640}
-                            className="w-auto h-32"
-                        />
+        <main className="min-h-screen bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500">
+            <div className="min-h-screen flex items-center justify-center p-4">
+                <div className="text-center text-white max-w-4xl">
+                    <h1 className="text-6xl md:text-7xl font-bold mb-6 animate-fade-in">
+                        Young Changemakers
+                    </h1>
+                    <p className="text-xl md:text-2xl mb-4 opacity-90">
+                        Empowering kids to change the world, one story at a time
+                    </p>
+                    <p className="text-lg mb-12 opacity-80">
+                        Discover inspiring stories, support youth-led nonprofits, and find resources to start your own journey
+                    </p>
+
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Link
+                            href="/stories"
+                            className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors inline-block shadow-lg"
+                        >
+                            View Stories
+                        </Link>
+                        <Link
+                            href="/campaigns"
+                            className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors inline-block"
+                        >
+                            Support a Cause
+                        </Link>
                     </div>
-                </div>
 
-                {/* Grid Section - Bottom */}
-                <div className="flex-1 grid grid-cols-2 gap-3 p-3">
-                    {/* Upper Left - News & Forums */}
-                    <Link
-                        href="/news"
-                        className="flex items-center justify-center bg-[#E21B3C] hover:bg-[#C91132] active:bg-[#C91132] transition-colors duration-200 text-white rounded-2xl shadow-lg"
-                    >
-                        <div className="text-center p-4">
-                            <h2 className="text-2xl font-bold mb-1">News & Forums</h2>
-                            <p className="text-sm opacity-90">Stay updated</p>
+                    <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+                            <div className="text-4xl font-bold mb-2">100+</div>
+                            <div className="text-sm opacity-90">Young Changemakers</div>
                         </div>
-                    </Link>
-
-                    {/* Upper Right - Login */}
-                    <Link
-                        href="/login"
-                        className="flex items-center justify-center bg-[#1368CE] hover:bg-[#0F5AAF] active:bg-[#0F5AAF] transition-colors duration-200 text-white rounded-2xl shadow-lg"
-                    >
-                        <div className="text-center p-4">
-                            <h2 className="text-2xl font-bold mb-1">Login</h2>
-                            <p className="text-sm opacity-90">Access account</p>
+                        <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+                            <div className="text-4xl font-bold mb-2">50K+</div>
+                            <div className="text-sm opacity-90">Lives Impacted</div>
                         </div>
-                    </Link>
-
-                    {/* Bottom Left - About & Contact */}
-                    <Link
-                        href="/about"
-                        className="flex items-center justify-center bg-[#FFA602] hover:bg-[#E69500] active:bg-[#E69500] transition-colors duration-200 text-white rounded-2xl shadow-lg"
-                    >
-                        <div className="text-center p-4">
-                            <h2 className="text-2xl font-bold mb-1">About & Contact</h2>
-                            <p className="text-sm opacity-90">Learn more</p>
+                        <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+                            <div className="text-4xl font-bold mb-2">$2M+</div>
+                            <div className="text-sm opacity-90">Funds Raised</div>
                         </div>
-                    </Link>
-
-                    {/* Bottom Right - Register */}
-                    <Link
-                        href="/register"
-                        className="flex items-center justify-center bg-[#26890C] hover:bg-[#1E6D0A] active:bg-[#1E6D0A] transition-colors duration-200 text-white rounded-2xl shadow-lg"
-                    >
-                        <div className="text-center p-4">
-                            <h2 className="text-2xl font-bold mb-1">Register</h2>
-                            <p className="text-sm opacity-90">Create account</p>
-                        </div>
-                    </Link>
-                </div>
-            </div>
-
-            {/* Desktop Layout: Logo centered, 2x2 grid */}
-            <div className="hidden md:block min-h-screen bg-white p-4 relative">
-                {/* Grid Container */}
-                <div className="grid grid-cols-2 gap-4 h-[calc(100vh-2rem)]">
-
-                    {/* Upper Left - News & Forums */}
-                    <Link
-                        href="/news"
-                        className="flex items-center justify-center bg-[#E21B3C] hover:bg-[#C91132] transition-colors duration-300 text-white rounded-3xl shadow-lg"
-                    >
-                        <div className="text-center">
-                            <h2 className="text-3xl lg:text-5xl font-bold mb-2">News & Forums</h2>
-                            <p className="text-lg lg:text-xl opacity-90">Stay updated with the latest</p>
-                        </div>
-                    </Link>
-
-                    {/* Upper Right - Login */}
-                    <Link
-                        href="/login"
-                        className="flex items-center justify-center bg-[#1368CE] hover:bg-[#0F5AAF] transition-colors duration-300 text-white rounded-3xl shadow-lg"
-                    >
-                        <div className="text-center">
-                            <h2 className="text-3xl lg:text-5xl font-bold mb-2">Login</h2>
-                            <p className="text-lg lg:text-xl opacity-90">Access your account</p>
-                        </div>
-                    </Link>
-
-                    {/* Bottom Left - About & Contact */}
-                    <Link
-                        href="/about"
-                        className="flex items-center justify-center bg-[#FFA602] hover:bg-[#E69500] transition-colors duration-300 text-white rounded-3xl shadow-lg"
-                    >
-                        <div className="text-center">
-                            <h2 className="text-3xl lg:text-5xl font-bold mb-2">About & Contact</h2>
-                            <p className="text-lg lg:text-xl opacity-90">Learn more about us</p>
-                        </div>
-                    </Link>
-
-                    {/* Bottom Right - Register */}
-                    <Link
-                        href="/register"
-                        className="flex items-center justify-center bg-[#26890C] hover:bg-[#1E6D0A] transition-colors duration-300 text-white rounded-3xl shadow-lg"
-                    >
-                        <div className="text-center">
-                            <h2 className="text-3xl lg:text-5xl font-bold mb-2">New Registration</h2>
-                            <p className="text-lg lg:text-xl opacity-90">Create your account</p>
-                        </div>
-                    </Link>
-                </div>
-
-                {/* Centered Logo */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                    <div className="bg-white p-4 shadow-2xl rounded-2xl inline-block">
-                        <Image
-                            src="/logo.png"
-                            alt="Logo"
-                            width={1000}
-                            height={640}
-                            className="w-auto h-36 lg:h-48"
-                        />
                     </div>
                 </div>
             </div>
-        </>
+        </main>
     );
 }
